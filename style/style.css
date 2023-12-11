@@ -1,3 +1,56 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../../fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: "Playfair Display Italic";
+  src: url(../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
+}
+.body {
+  position: relative;
+  counter-reset: count;
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  background-image: url(../images/background-forest.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
 
+.duck__input {
+  position: absolute;
+  visibility: hidden;
+  left: -999999px;
+}
+.duck__input:checked {
+  counter-increment: count;
+}
+
+.counter__current-count::before {
+  content: counter(count);
+}
+
+.duck__img {
+  width: 150px;
+}
+
+.counter {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: yellow;
+}
+
+.counter__title {
+  font-family: "Playfair Display", serif;
+  font-size: 22px;
+}
+
+.counter__current-count {
+  font-size: 20px;
+}
 
 /*# sourceMappingURL=style.css.map */

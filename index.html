@@ -4,11 +4,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/normalize.css">
   <link rel="stylesheet" href="style/style.css">
   <title>duck hunting</title>
 </head>
 
-<body>
+<body class="body">
+  <div class="duck-wrap">
+    <div class="duck">
+      <input id="duck1" class="duck__input" type="checkbox">
+      <label for="duck1">
+        <img class="duck__img" src="images/bird1.gif">
+      </label>
+    </div>
+    <div class="duck">
+      <input id="duck2" class="duck__input" type="checkbox">
+      <label for="duck2">
+        <img class="duck__img" src="images/bird1.gif">
+      </label>
+    </div>
+    <div class="duck">
+      <input id="duck3" class="duck__input" type="checkbox">
+      <label for="duck3">
+        <img class="duck__img" src="images/bird1.gif">
+      </label>
+    </div>
+  </div>
+
+  <div class="counter">
+    <h1 class="counter__title">Текущий счет: </h1>
+    <h2 class="counter__current-count"></h2>
+  </div>
+
+
 
 </body>
 
