@@ -6,6 +6,84 @@
   font-family: "Playfair Display Italic";
   src: url(../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
+@keyframes duckFly-1 {
+  0% {
+    left: -160px;
+    top: 3vh;
+  }
+  20% {
+    left: 1vw;
+    top: 41vh;
+  }
+  40% {
+    left: 51vw;
+    top: 43vh;
+  }
+  60% {
+    left: 16vw;
+    top: 47vh;
+  }
+  80% {
+    left: 47vw;
+    top: 2vh;
+  }
+  100% {
+    left: 100vw;
+    top: 71vh;
+  }
+}
+@keyframes duckFly-2 {
+  0% {
+    left: -160px;
+    top: 70vh;
+  }
+  20% {
+    left: 40vw;
+    top: 11vh;
+  }
+  40% {
+    left: 11vw;
+    top: 16vh;
+  }
+  60% {
+    left: 46vw;
+    top: 4vh;
+  }
+  80% {
+    left: 5vw;
+    top: 19vh;
+  }
+  100% {
+    left: 100vw;
+    top: 6vh;
+  }
+}
+@keyframes duckFly-3 {
+  0% {
+    left: -160px;
+    top: 60vh;
+  }
+  20% {
+    left: 23vw;
+    top: 26vh;
+  }
+  40% {
+    left: 15vw;
+    top: 41vh;
+  }
+  60% {
+    left: 60vw;
+    top: 37vh;
+  }
+  80% {
+    left: 27vw;
+    top: 9vh;
+  }
+  100% {
+    left: 100vw;
+    top: 30vh;
+  }
+}
 .body {
   position: relative;
   counter-reset: count;
@@ -18,6 +96,10 @@
   background-blend-mode: multiply;
 }
 
+.duck {
+  position: absolute;
+}
+
 .duck__input {
   position: absolute;
   visibility: hidden;
@@ -26,13 +108,29 @@
 .duck__input:checked {
   counter-increment: count;
 }
+.duck__input:checked + label {
+  display: none;
+}
+
+.duck__img {
+  width: 160px;
+}
 
 .counter__current-count::before {
   content: counter(count);
 }
 
-.duck__img {
-  width: 150px;
+.duck {
+  position: absolute;
+}
+.duck-1 {
+  animation: duckFly-1 3s ease 1s 1 normal forwards;
+}
+.duck-2 {
+  animation: duckFly-2 3s ease 2s 1 normal forwards;
+}
+.duck-3 {
+  animation: duckFly-3 3s ease 3s 1 normal forwards;
 }
 
 .counter {

@@ -8,4 +8,35 @@
   src: url(../../fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf);
 }
 
-$widthOfBird: 150px;
+$widthOfBird: 160px;
+
+$iterationOfAnimation: 3;
+
+@for $i from 1 through $iterationOfAnimation {
+  @keyframes duckFly-#{$i} {
+    0% {
+      left: -$widthOfBird;
+      top: random(100) + vh;
+    }
+    20% {
+      left: random(40) + vw;
+      top: random(80) + vh;
+    }
+    40% {
+      left: random(60) + vw;
+      top: random(60) + vh;
+    }
+    60% {
+      left: random(60) + vw;
+      top: random(60) + vh;
+    }
+    80% {
+      left: random(100) + vw;
+      top: random(80) + vh;
+    }
+    100% {
+      left: 100vw;
+      top: random(100) + vh;
+    }
+  }
+}

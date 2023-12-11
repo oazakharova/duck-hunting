@@ -12,6 +12,10 @@
   background-blend-mode: multiply;
 }
 
+.duck {
+  position: absolute;
+}
+
 .duck__input {
   position: absolute;
   visibility: hidden;
@@ -19,15 +23,33 @@
 
   &:checked {
     counter-increment: count;
+
+    & + label {
+      display: none;
+    }
   }
+}
+
+.duck__img {
+  width: $widthOfBird;
 }
 
 .counter__current-count::before {
   content: counter(count);
 }
 
-.duck__img {
-  width: $widthOfBird;
+.duck {
+  position: absolute;
+
+  // &-1 {
+  //   animation: duckFly 4s ease 0s 1 normal forwards;
+  // }
+
+  @for $i from 1 through $iterationOfAnimation {
+    &-#{$i} {
+      animation: duckFly-#{$i} 3s ease #{$i}s 1 normal forwards;
+    }
+  }
 }
 
 .counter {
